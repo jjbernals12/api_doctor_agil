@@ -1,7 +1,5 @@
-FROM openjdk:17-jdk
+FROM amazoncorretto:17-alpine-jdk
 
-WORKDIR /app
+COPY taget/apiSuarezPharma-0.0.1-SNAPSHOT.jar app.jar
 
-COPY target/apiSuarezPharma-0.0.1-SNAPSHOT /app/apiSuarezPharma-0.0.1-SNAPSHOT
-
-CMD ["java", "-jar", "apiDoctorAgil-0.0.1-SNAPSHOT"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
