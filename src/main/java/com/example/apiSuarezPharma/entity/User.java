@@ -20,6 +20,8 @@ public class User {
     private String city;
     private String typeOfDocument;
     private String password;
+    private String promotor;
+    private String pago;
 
 
     public String getPassword() {
